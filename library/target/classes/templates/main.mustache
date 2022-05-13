@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+
+    <h2>Добавление книги</h2>
+
+    <div>
+        <form method = "post" action = "addBook" enctype = "multipart/form-data">
+        <input type = "text" name = "title" placeholder = "Название книги">
+        <input type = "text" name = "author" placeholder = "Автор книги">
+        <input type = "file" name = "filename">
+        <button type = "submit"> Добавить книгу </button>
+        </form>
+    </div>
+
+    <h2>Удаление книги</h2>
+
+    <div>
+            <form method = "post" action = "filterBookByID">
+            <input type = "text" name = "filter">
+            <button type = "submit"> Удалить </button>
+            </form>
+    </div>
+
+    {{#books}}
+
+        <div>
+            <h4>
+                <b>{{id}}</b>
+                <b>{{title}}</b>
+                <b>{{author}}</b>
+                <a href = "books/{{filename}}" download>Скачать</a>
+            </h4>
+        </div>
+    {{/books}}
+
+</body>
+</html>

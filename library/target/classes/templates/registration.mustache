@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<div>
+    <h3>Регистрация</h3>
+
+    <form method = "post" action = "check">
+        <input type = "text" name = "login" placeholder = "Логин">
+        <input type="password" name = "password" placeholder = "Пароль">
+        <button type = "submit"> Зарегистрироваться </button>
+    </form>
+</div>
+
+{{#message}}
+    {{.}}
+{{/message}}
+
+</body>
+</html>

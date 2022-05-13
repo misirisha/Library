@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+    <div>
+    <h2> Приветик,
+    {{#userLogin}}
+            {{.}}
+    {{/userLogin}}
+    </h2>
+    </div>
+    <div>
+        <a href="/usersBooks" class="btn">Мои книги</a>
+        <a href="/findBook" class="btn">Найти книгу</a>
+    </div>
+
+</body>
+</html>

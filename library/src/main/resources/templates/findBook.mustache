@@ -1,0 +1,30 @@
+<html>
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+<a href="/userPage" class="btn">Главная</a>
+<p> </p>
+
+<h3>Поиск по названию или автору</h3>
+
+<div>
+    <form method = "post" action = "filterBook">
+        <input type = "text" name = "filter">
+        <button type = "submit"> Найти </button>
+    </form>
+</div>
+
+{{#books}}
+    <div>
+        <b>{{title}}</b>
+        <b>{{author}}</b>
+        <form method = "post" action = "addToUserLibrary?bookId={{id}}">
+            <button type = "submit" > Купить </button>
+        </form>
+    </div>
+{{/books}}
+
+</body>
+</html>

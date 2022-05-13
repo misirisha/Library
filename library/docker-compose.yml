@@ -1,0 +1,9 @@
+services:
+  db:
+    image: buildo/h2database
+    ports:
+      - "9092:9092"
+  client:
+    build: ./
+    ports:
+      - "8080:8080"
